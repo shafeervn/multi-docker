@@ -21,5 +21,6 @@ after_success:
   - docker push abufathima/multi-nginx
   - docker push abufathima/multi-server
   - docker push abufathima/multi-worker
+  
 
 language: generic
