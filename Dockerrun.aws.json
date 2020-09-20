@@ -5,29 +5,34 @@
       "name": "client",
       "image": "abufathima/multi-nginx",
       "hostname": "client",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "server",
       "image": "abufathima/multi-server",
       "hostname": "api",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "woker",
       "image": "abufathima/multi-worker",
       "hostname": "worker",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "nginx",
       "image": "abufathima/nginx",
       "hostname": "nginx",
       "essential": true,
-      "portMappings": {
-        "hostPort": 80,
-        "containerPort": 80
-      },
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
       "links": ["client", "server"]
     }
   ]
