@@ -23,12 +23,12 @@
       "name": "nginx",
       "image": "abufathima/nginx",
       "hostname": "nginx",
-      "essential": false,
+      "essential": true,
       "portMappings": {
         "hostPort": 80,
         "containerPort": 80
       },
-      "links":["client","server"]
+      "links": ["client", "server"]
     }
   ]
 }
